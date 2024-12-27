@@ -1,0 +1,184 @@
+openapi: 3.0.0
+info:
+  title: KOI Node Network API
+  description: API for coordinating communication across KOI nodes
+  version: 1.0.0
+tags:
+  - name: sensor
+    description: endpoints for sensor nodes to implement (communication with coordinator and downstream nodes)
+  - name: coordinator
+    description: endpoints for coordinator nodes to implement (communication with sensors and processors)
+  - name: processor
+    description: endpoints for processor nodes to implement (communication with coordinator)
+paths:
+  /sensors:
+    get:
+      summary: Retrieve sensor information
+      tags:
+        - coordinator
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties:
+                  type: string
+                example:
+                  rid_context1: sensor_url1
+                  rid_context2: sensor_url2
+                  
+    post:
+      summary: Register a new sensor with the coordinator
+      tags:
+        - coordinator
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Sensor"
+
+      responses:
+        "200":
+          description: Success
+  /events/publish:
+    post:
+      summary: Publish an event to be brokered by the coordinator
+      tags:
+        - coordinator
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Event"
+            
+      responses:
+        "200":
+          description: Success
+  /events/subscribe:
+    post:
+      summary: Subscribe to RID events
+      tags:
+        - coordinator
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                url:
+
+                  type: string
+      responses:
+        "200":
+          description: Success
+  /events/receive:
+    post:
+      summary: Called by coordinator to send events to subscribed nodes
+      tags:
+        - processor
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Event"
+      responses:
+        "200":
+          description: Success
+  /rids:
+    get:
+      summary: Retrieve all known RIDs from the node
+      tags:
+        - coordinator
+        - sensor
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/RID"
+  
+  /object:
+    get:
+      summary: Retrieve dereferenced data associated with an RID
+      tags:
+        - sensor
+      parameters:
+        - in: query
+          name: rid
+          schema:
+            $ref: "#/components/schemas/RID"
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  manifest: 
+                    $ref: "#/components/schemas/Manifest"
+                  data:
+                    type: object
+  
+
+components:
+  schemas:
+    RID:
+      type: string
+      format: rid
+      example: "orn:slack.message:TA2E6KPK3/C07BKQX0EVC/1721669683.087619"
+    Manifest:
+      type: object
+      properties:
+        rid:
+          $ref: "#/components/schemas/RID"
+        timestamp:
+          type: string
+          format: date-time
+        sha256_hash:
+          type: string
+      required:
+        - rid
+        - timestamp
+        - sha256_hash
+    Event:
+      type: object
+      properties:
+        rid:
+          $ref: "#/components/schemas/RID"
+        manifest:
+          $ref: "#/components/schemas/Manifest"
+        event_type:
+          enum:
+            - "NEW"
+            - "UPDATE"
+            - "FORGET"
+          type: string
+      required:
+        - rid
+        - event_type
+    Sensor:
+      type: object
+      properties:
+        url:
+          type: string
+        contexts:
+          type: array
+          items:
+            type: string
+          example:
+            - "https"
+            - "orn:slack.message"
+            - "orn:hackmd.note"
+      required:
+        - url
+        - contexts
