@@ -10,8 +10,7 @@ Repositories are (again roughly) sorted into four tracks: the core infrastructur
 - Core Infrastructure
   - [rid-lib](https://github.com/BlockScience/rid-lib/) (KOI v3) - Implementation of RID v3 specification, and extended features (RID manifests, caching).
   - [rid-registry](https://github.com/BlockScience/rid-registry) (KOI v3) - Registry of supported RID types to be implemented by rid-lib.
-  - [koi_v3_node_api.yaml](koi_v3_node_api.yaml) (KOI v3) - WIP OpenAPI specification hosted in this repo, [view Swagger docs here](https://generator.swagger.io/?url=https://raw.githubusercontent.com/BlockScience/koi/refs/heads/main/koi_v3_node_api.yaml).
-  - [koi-net](https://github.com/BlockScience/koi-net) (KOI v3) - Implementation of KOI-net protocol, currently in prototyping phase.
+  - [koi-net](https://github.com/BlockScience/koi-net) (KOI v3) - Implementation of KOI-net protocol, currently in beta release.
 - BlockScience
   - [koi-coordinator](https://github.com/BlockScience/koi-coordinator) (KOI v3) - Active development of coordinator node prototypes. Integrates with sensors below.
   - [koi-sensors](https://github.com/blockScience/koi-sensors) (KOI v3) - Active development of sensor node prototypes exploring new KOI network architecture. Using latest version of rid-lib.
