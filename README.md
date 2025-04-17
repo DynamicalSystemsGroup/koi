@@ -26,6 +26,7 @@ Repositories are (again roughly) sorted into four tracks: the core infrastructur
   - [kms-tools](https://github.com/metagov/kms-tools) (KOI v2) - Sensors and interfaces for Metagov KOI, including KOI-GPT, Slack listener and backfill, and websites.
 - RMIT
   - [slack-telescope](https://github.com/metagov/slack-telescope) (KOI v3) - RMIT tool to manage consent based ethnographic research collecting Slack messages. "KOI-lite" stand alone implementation with a built in cache and limited graph capabilities. Using latest version of rid-lib.
+  - [koi-obsidian-plugin](https://github.com/metagov/koi-obsidian-plugin) (KOI v3) - Obsidian plugin for syncing knowledge objects from KOI-net nodes into Markdown documents.
  
 ## Other Resources
 - Documentation
