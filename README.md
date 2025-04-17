@@ -12,8 +12,11 @@ Repositories are (again roughly) sorted into four tracks: the core infrastructur
   - [rid-registry](https://github.com/BlockScience/rid-registry) (KOI v3) - Registry of supported RID types to be implemented by rid-lib.
   - [koi-net](https://github.com/BlockScience/koi-net) (KOI v3) - Implementation of KOI-net protocol, currently in beta release.
 - BlockScience
-  - [koi-coordinator](https://github.com/BlockScience/koi-coordinator) (KOI v3) - Active development of coordinator node prototypes. Integrates with sensors below.
-  - [koi-sensors](https://github.com/blockScience/koi-sensors) (KOI v3) - Active development of sensor node prototypes exploring new KOI network architecture. Using latest version of rid-lib.
+  - [koi-net-coordinator-node](https://github.com/BlockScience/koi-net-coordinator-node) (KOI v3) - KOI-net coordinator node implementation.
+  - [koi-net-slack-sensor-node](https://github.com/BlockScience/koi-net-slack-sensor-node) (KOI v3) - KOI-net Slack sensor node implementation.
+  - [koi-net-hackmd-sensor-node](https://github.com/BlockScience/koi-net-hackmd-sensor-node) (KOI v3) - KOI-net HackMD sensor node implementation.
+  - [koi-coordinator](https://github.com/BlockScience/koi-coordinator) (KOI v3 prototype) - Previous development of coordinator node prototypes. Integrates with sensors below.
+  - [koi-sensors](https://github.com/blockScience/koi-sensors) (KOI v3 prototype) - Previous development of sensor node prototypes exploring new KOI network architecture. Using latest version of rid-lib.
   - [kms-slack](https://github.com/BlockScience/kms-slack) (KOI v1) - KMS-GPT Slack bot chat interface implementing its own vectorstore.
   - [kms-web](https://github.com/BlockScience/kms-web) (KOI v1) - Upgraded KMS website with KMS-GPT chat interface and text search.
   - [kms-api](https://github.com/BlockScience/kms-api) (KOI v1) - Backend for upgraded KMS website.
