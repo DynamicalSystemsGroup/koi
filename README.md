@@ -37,3 +37,4 @@ Repositories are (again roughly) sorted into four tracks: the core infrastructur
   - [Metagov Project Spotlight: KOI Pond](https://metagov.substack.com/p/metagov-project-spotlight-koi-pond)
   - ["A Language for Knowledge Networks" - Michael Zargham & Ilan Ben-Meir (BlockScience)](https://blog.block.science/a-language-for-knowledge-networks/)
   - ["Objects as Reference" - Orion Reed (BlockScience)](https://blog.block.science/objects-as-reference-toward-robust-first-principles-of-digital-organization/)
+  - ["Digital Infrastructure Research & Development: KOI Network Protocol x Project Interlay"](https://blog.block.science/koi-network-protocol-project-interlay/)
