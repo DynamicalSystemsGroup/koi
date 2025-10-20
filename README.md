@@ -34,9 +34,6 @@ Version 1 is BlockScience's KMS (Knowledge Management System), which started the
     - [`koi-net-github-processor-node`](https://github.com/BlockScience/koi-net-github-processor-node)
   - Demos
     - [`koi-net-demo-v1`](https://github.com/BlockScience/koi-net-demo-v1)
-  - Prototypes
-    - [`koi-coordinator`](https://github.com/BlockScience/koi-coordinator) - Coordinator node prototypes. Integrates with sensors below.
-    - [`koi-sensors`](https://github.com/blockScience/koi-sensors) - Sensor node prototypes exploring new KOI network architecture.
   - Related Projects
       - [`slack-telescope`](https://github.com/metagov/slack-telescope) - RMIT tool to manage consent based ethnographic research collecting Slack messages. "KOI-lite" stand alone implementation with a built in cache and limited graph capabilities. Using latest version of rid-lib.
       - [`koi-obsidian-plugin`](https://github.com/metagov/koi-obsidian-plugin) - KOI-net compatible partial node used by RMIT researchers to sync research data between KOI and Obsidian.
