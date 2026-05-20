@@ -55,5 +55,5 @@ Version 1 is Dynamical Systems Group's KMS (Knowledge Management System), which 
   - ["KOI-Pond: The creation of a synthetic deme" - Ellie Rennie (RMIT)](https://ellierennie.medium.com/koi-pond-the-creation-of-a-synthetic-deme-999a6f1f3426)
   - [Metagov Project Spotlight: KOI Pond](https://metagov.substack.com/p/metagov-project-spotlight-koi-pond)
   - "A Language for Knowledge Networks" - Michael Zargham & Ilan Ben-Meir (Dynamical Systems Group)
-  - "Objects as Reference" - Orion Reed (Dynamical Systems Group)objects-as-reference-toward-robust-first-principles-of-digital-organization/)
+  - "Objects as Reference" - Orion Reed (Dynamical Systems Group)
   - Digital Infrastructure Research & Development: KOI Network Protocol x Project Interlay
